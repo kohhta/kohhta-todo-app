@@ -1,8 +1,16 @@
   <h1 class="title"><%= @article.title %></h1>
 <div class="article">
-  <div class="article_detail">
-    <%= image_tag 'Oval.png' %>
+  <div class="article_detail">Brackets
+    <%= image_tag 'Oval2.png' %>
     <div>
+    </div>
+        <div class="article_detail_actions">
+      <div class="dropdown">
+        <%= image_tag 'actions.svg', class: 'dropbtn' %>
+        <div class="dropdown-content mini">
+        <%= link_to '編集する' , edit_article_path(@article) %>
+        </div>
+      </div>
     </div>
   </div>
   <div class="article_content">
