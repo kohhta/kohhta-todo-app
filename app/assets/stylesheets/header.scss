@@ -11,6 +11,15 @@ $back-icon-size: 16px;
   padding: $header-padding-y 16px;
   font-weight: bold;
 
+  &_loginBtn {
+    background-color: black;
+    height: $avatar-size;
+    border-radius: 8px;
+    font-size: 12px;
+    padding: 12px 16px;
+    color: white;
+  }
+
   &_logos {
     min-width: 0;
     display: flex;
@@ -47,8 +56,8 @@ $back-icon-size: 16px;
   height: 1px;
   left: 0px;
   top: 58px;
-
   background: #000000;
   mix-blend-mode: normal;
   opacity: 0.1;
+  margin-top: 4px;
 }
