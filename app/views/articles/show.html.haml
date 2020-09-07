@@ -4,7 +4,8 @@
     Brackets
     \#{image_tag 'Oval4.svg'}
     %div
-    - if user_signed_in?
+      %p= @article.user.display_name
+    - if user_signed_in? && current_user.has_written?(@article)
       .article_detail_actions
         .dropdown
           = image_tag 'actions.svg', class: 'dropbtn'
