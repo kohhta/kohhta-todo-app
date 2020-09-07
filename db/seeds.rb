@@ -6,8 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# jon = User.create!(email: 'john@example.com', password: 'password')
-# emily = User.create!(email: 'emily@example.com', password: 'password')
+jon = User.create!(email: 'john@example.com', password: 'password')
+emily = User.create!(email: 'emily@example.com', password: 'password')
 
 
 Article.create({title: '新しくすること', content: 'オフィスデスクの掃除をする'})
