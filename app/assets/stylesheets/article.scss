@@ -9,15 +9,23 @@ $avatar-size: 32px;
   line-height: 36px;
   color: #000000;
   margin-left: 24px;
+  
 
 }
 
 .article {
-  background-color: white;
+  background-color: #F4F4F4;
   margin: 16px 16px;
   padding: 16px 16px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   position: relative;
+  border-radius: 10px;
+
+  h2 {
+    font-size: 16px;
+  }
+
+
 
   // &_title {
   //   font-family: Avenir;
@@ -27,6 +35,11 @@ $avatar-size: 32px;
   //   line-height: 36px;
   //   color: #000000;
   // }
+
+  &_comment {
+    padding: 12px 0;
+  }
+
 
   &_detail {
     padding-top: 10px;

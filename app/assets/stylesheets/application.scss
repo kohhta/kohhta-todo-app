@@ -57,6 +57,18 @@ a {
 
 }
 
+.float-btn-comments {
+  width: 90%;
+  height: 57px;
+  margin: 5%;
+  // left: 30px;
+  // top: 917px;
+
+  background: #FFFFFF;
+  border: 3px dashed rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
 .add{
   // position: absolute;
   margin: 62px;
@@ -69,4 +81,17 @@ font-size: 18px;
 line-height: 25px;
 text-align: center;
 color: #000000;
+}
+
+.add-comments {
+  left: 0%;
+  right: 0%;
+  padding-top: 14px;
+  font-family: Avenir;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  color: #000000;
 }
