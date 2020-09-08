@@ -1,9 +1,11 @@
 .container
   .identical
     Brackets
-- @articles.each do |article|
-  = render 'article', article: article
-= link_to new_article_path	do
-  .float-btn
-    .add
-      + Add new card
+  .aaa
+    =link_to 'All Boards', board_path
+  - @articles.each do |article|
+    = render 'article', article: article
+  = link_to new_article_path	do
+    .float-btn
+      .add
+        + Add new card
