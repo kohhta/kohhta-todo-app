@@ -1,4 +1,8 @@
 %h1.title= @article.title
+.eyecatch
+  - if @article.eyecatch.attached?
+    .eyecatch_image
+      = image_tag @article.eyecatch
 .article
   .article_detail
     Brackets
