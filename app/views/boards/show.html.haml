@@ -1,9 +1,15 @@
 .article
-  %h1.article_title= @board.title
+  %h1.article_title
+    = @board.title
   .article_detail
     = image_tag 'Oval4.svg'
     %div
       %p cohki0305
       %p 2020/4/16
+    .article_detail_actions
+      .dropdown
+        = image_tag 'actions.svg', class: 'dropbtn'
+        .dropdown-content.mini
+          %a{:href => "#"} 編集する
   .article_content
     = @board.content
