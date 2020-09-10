@@ -1,0 +1,19 @@
+%h2.title New Card
+.container
+  %ul
+    - @board.errors.full_messages.each do |message|
+      %li= message
+  = form_with(model: @board, url:boards_path ,method: 'post', local: true) do  |f|
+    %div
+      = f.label :eyecatch, 'アイキャッチ'
+    %div
+      = f.file_field :eyecatch
+    %div
+      = f.label :title, 'Title '
+    %div
+      = f.text_field :title,class: 'text'
+    %div
+      = f.label :title, 'いつまでになにをする？ '
+    %div
+      = f.text_area :content
+    = f.submit 'Submit',class: 'btn-primary'
