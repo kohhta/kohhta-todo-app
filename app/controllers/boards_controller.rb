@@ -1,4 +1,5 @@
 class BoardsController < ApplicationController
+  before_action :set_board,only: [:show]
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
 
@@ -7,7 +8,6 @@ class BoardsController < ApplicationController
   end
 
   def show
-    @board = Board.find(params[:id])
   end
   
   def new
@@ -47,6 +47,10 @@ class BoardsController < ApplicationController
   private
   def board_params
     params.require(:board).permit(:title, :content, :eyecatch)
+  end
+
+  def set_board
+    @board = Board.find(params[:id])
   end
 
 
