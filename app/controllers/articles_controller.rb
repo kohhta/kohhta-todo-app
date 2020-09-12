@@ -2,7 +2,6 @@ class ArticlesController < ApplicationController
   before_action :set_article,only: [:show]
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
-
   def index
     @articles = Article.all
   end
@@ -33,12 +32,12 @@ class ArticlesController < ApplicationController
     @article = current_user.articles.find(params[:id])
     if @article.update(article_params)
       redirect_to article_path(@article),nottice:   '更新できました'
-    else 
+    else
       flash.now[:error] = '更新できませんでした'
       render :edit
     end
   end
-  
+
   def destroy
     article = current_user.articles.find(params[:id])
     article.destroy!
@@ -53,6 +52,5 @@ class ArticlesController < ApplicationController
   def set_article
     @article = Article.find(params[:id])
   end
-  
 
 end
