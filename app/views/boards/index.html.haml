@@ -4,9 +4,9 @@
       All Boards
     .aaa
       = link_to 'Brackets', root_path
-  - @boards.each do |board|
-    = render 'board', board: board
+    - @boards.each do |board|
+      = render 'board', board: board
   = link_to new_board_path	do
     .float-btn
       .add
-        + Add new card
+        + Add new ToDo
