@@ -26,7 +26,7 @@ class User < ApplicationRecord
    has_many :articles, dependent: :destroy
    has_many :boards, dependent: :destroy
    has_many :comments, dependent: :destroy
-   
+
   def has_written?(article)
     articles.exists?(id: article.id)
   end
@@ -38,5 +38,5 @@ class User < ApplicationRecord
   def display_name
     self.email.split('@').first
   end
-         
+
 end
