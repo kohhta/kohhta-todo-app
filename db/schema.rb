@@ -46,14 +46,11 @@ ActiveRecord::Schema.define(version: 2020_09_08_143441) do
   end
 
   create_table "boards", force: :cascade do |t|
-    t.string "taggable_type", default: "Photo"
-    t.bigint "taggable_id"
     t.bigint "user_id", null: false
     t.string "title", null: false
     t.text "content", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["taggable_type", "taggable_id"], name: "index_boards_on_taggable_type_and_taggable_id"
     t.index ["user_id"], name: "index_boards_on_user_id"
   end
 
