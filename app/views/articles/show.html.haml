@@ -25,6 +25,7 @@
   
   - @comments.each do |comment|
     .article_comment
+      %p= @article.user.display_name
       %p= comment.content
 
 .container
