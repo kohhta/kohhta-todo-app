@@ -1,11 +1,10 @@
 .container
-  .tabs
-    .identical
-      All Boards
-    .aaa
-      = link_to 'Brackets', root_path
-    - @boards.each do |board|
-      = render 'board', board: board
+  .identical
+    All Boards
+  .aaa
+    = link_to 'Brackets', root_path
+  - @boards.each do |board|
+    = render 'boards/board', board: board
   = link_to new_board_path	do
     .float-btn
       .add
